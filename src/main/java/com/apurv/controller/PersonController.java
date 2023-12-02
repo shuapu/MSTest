@@ -17,6 +17,12 @@ public class PersonController {
 	@Autowired
 	private PersonService personService;
 
+	/**
+	 * Sample mapping
+	 * 
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/get/{id}")
 	public ResponseEntity<Person> getPerson(@PathVariable("id") Integer id) {
 		return ResponseEntity.of(personService.getPerson(id));
